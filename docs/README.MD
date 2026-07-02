@@ -1,5 +1,7 @@
-There are two parts to this project.
+# Project Overview
 
-1. The installation wizard which is found in the folder 'wizard'. This is the URL that is set in the Client App configuration
+There are two parts to this project, hosted as a static site via **GitHub Pages** from this `docs` folder.
 
-2. The Premium App itself where the wizard will redirect after installation or if it determines that the app is already installed. Found in the folder 'premium-app-sample'.
+1. **The installation wizard** (`wizard/`) — the URL set in the Genesys Client App / Premium App integration configuration. It authenticates the installing admin, checks the AuditTrack product is enabled, provisions the access role, and marks the integration installed.
+
+2. **The Premium App landing (holding) page** (`index.html`) — where the wizard redirects after installation, or immediately if it determines the app is already installed. This is the page users see inside Genesys Cloud, with links to help, FAQ, sales, and support.

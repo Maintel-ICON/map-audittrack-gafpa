@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header {
+    background-color: #22333b;
+    color: white;
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: white;
+}
+
+header img {
+    max-height: 80px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #002855;
+}
+
+h2 {
+    color: #002855;
+}
+
+ul {
+    text-align: left;
+}
+
+.cta {
+    margin-bottom: 2rem;
+    text-align: center;
+    display: flex;
+    gap: 2rem;
+}
+
+.cta a {
+    background-color: #b2d953;
+    color: #22333b;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    flex: 1;
+}
+
+.cta a:hover {
+    opacity: 0.8;
+}
+
+/* Styling for the application icon */
+.application-logo {
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 50px;
+    height: auto;
+}

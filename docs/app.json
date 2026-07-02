@@ -1,0 +1,10 @@
+{
+  "author": "Maintel",
+  "title": "Maintel AuditTrack",
+  "description": "AuditTrack is a secure, cloud-based solution that enables organisations to store, search, and manage their audit log data in a compliant manner. It provides a range of features, including encryption, access controls, and long-term retention, to ensure the security and integrity of audit records.",
+  "logo_url": "https://maintel.co.uk/wp-content/uploads/2024/11/maintel-logo-white-300DPI.png",
+  "categories": ["app foundry", "productivity"],
+  "tags": ["audittrack", "auditlogs", "compliance", "data retention", "data security"],
+  "apis": ["platform"],
+  "sdks": ["javascript"]
+}

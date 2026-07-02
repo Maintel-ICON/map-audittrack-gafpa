@@ -1,12 +1,12 @@
 export default
     {
         "en-us": {
-            "txt-premium-app-name": "Premium App",
+            "txt-premium-app-name": "Maintel AuditTrack",
             "txt-premium-home": "Home",
             "txt-premium-install": "Install",
             "txt-premium-summary": "Summary",
             "txt-greeting": "Hi",
-            "txt-greeting-2": "Welcome to the Premium App Example Application",
+            "txt-greeting-2": "Welcome to the Maintel AuditTrack installation",
             "txt-start": "Start",
             "txt-setup": "Custom Setup",
             "txt-install": "Install",
@@ -18,7 +18,7 @@ export default
             "txt-product-available": "Product Available",
             "txt-product-not-available": "Product not available",
             "txt-available-message": "Reminders:",
-            "txt-not-available-message": "We're sorry but your Genesys Cloud org does not have the Premium App Sample Product enabled. Please contact Genesys Cloud.",
+            "txt-not-available-message": "We're sorry but your Genesys Cloud org does not have the Maintel AuditTrack product enabled. Please contact Maintel or Genesys Cloud.",
             "txt-byoc-not-available": "BYOC Cloud not available",
             "txt-no-byoc-message": "We're sorry but your Genesys Cloud org does not have the BYOC Cloud Add-On enabled. Please contact Genesys Cloud.",
             "txt-unlicensed": "Access Denied",
@@ -29,7 +29,7 @@ export default
             "txt-details-failure-backend": "Cause: ",
             "txt-resolve-backend": "Please contact us, or we will contact you shortly by email.",
             "txt-error-access-denied": "Access Denied",
-            "txt-error-access-denied-msg": "It seems your Genesys Cloud organization is enforcing scopes, and this application (OAuth Client) has not been authorized.\n\nPlease contact your Administrator so that the \"Name of Wizard OAuth Client\" application is authorized (Genesys Cloud Admin - Integrations - Authorized Applications).",
+            "txt-error-access-denied-msg": "It seems your Genesys Cloud organization is enforcing scopes, and this application (OAuth Client) has not been authorized.\n\nPlease contact your Administrator so that the \"Maintel AuditTrack Wizard\" application is authorized (Genesys Cloud Admin - Integrations - Authorized Applications).",
             "txt-error-access-invalid": "Access Invalid",
             "txt-error-access-invalid-msg": "Access Invalid",
             "txt-install-summary": "These are the steps that will be automatically performed for you!",

@@ -1,13 +1,16 @@
 export default {
-    clientID: 'fd2ba742-446f-46c5-bbbc-1cad2f34ac3a',
+    // OAuth Client (PKCE Code Grant) created in the Maintel Genesys Cloud org.
+    // Its authorized redirect URIs must include the wizardUriBase below.
+    // TODO: replace with the real client ID before the wizard can run.
+    clientID: 'REPLACE-WITH-MAINTEL-WIZARD-OAUTH-CLIENT-ID',
 
     // wizardUriBase: 'http://localhost:8080/wizard/',
-    wizardUriBase: 'https://mypurecloud.github.io/purecloud-premium-app/wizard/',
+    wizardUriBase: 'https://maintel-icon.github.io/map-audittrack-gafpa/wizard/',
 
     // The actual URL of the landing page of your web app or your web site (when wizard has been run).
     // previously - defined as premiumAppURL
-    // redirectURLOnWizardCompleted: 'http://localhost:8080/premium-app-sample/index.html',
-    redirectURLOnWizardCompleted: 'https://mypurecloud.github.io/purecloud-premium-app/premium-app-sample/index.html',
+    // redirectURLOnWizardCompleted: 'http://localhost:8080/index.html',
+    redirectURLOnWizardCompleted: 'https://maintel-icon.github.io/map-audittrack-gafpa/index.html',
     redirectURLWithParams: true,
 
     // Genesys Cloud assigned name for the premium app
@@ -40,10 +43,9 @@ export default {
     // List available language assets - manage gcLangTag with possible formats like: en, en-US, en_US, en-CA, en_CA, ...
     // Values in lower case, using - or no separator
     availableLanguageAssets: {
-        'en-us': 'English',
-        'es': 'Español'
+        'en-us': 'English'
     },
-    enableLanguageSelection: true,
+    enableLanguageSelection: false,
 
     // The names of the query parameters to check in 
     // determining language and environment
@@ -55,7 +57,7 @@ export default {
 
     // Enable the optional 'Step 2' in the provisoning process
     // If false, it will not show the page or the step in the wizard
-    enableCustomSetupPageBeforeInstall: true,
+    enableCustomSetupPageBeforeInstall: false,
     // Enable the optional Post Custom Setup module in the install process
     // If true, it will invoke the postCustomSetup module (configure method) after the Genesys Cloud ones (provisioningInfo).
     enableCustomSetupStepAfterInstall: false,
@@ -71,7 +73,7 @@ export default {
     enableUninstall: true,
 
     // To be added to names of Genesys Cloud objects created by the wizard
-    prefix: 'PREMIUM_EXAMPLE_',
+    prefix: 'MAINTEL_AUDITTRACK_',
 
     // These are the Genesys Cloud items that will be added and provisioned by the wizard
     // To see the sample configuration of all possible objects please consult
@@ -80,42 +82,17 @@ export default {
         'role': [
             {
                 'name': 'Role',
-                'description': 'Generated role for access to the app.',
+                'description': 'Generated role for access to the Maintel AuditTrack app.',
                 'permissionPolicies': [
                     {
+                        // NOTE: update entityName to the AuditTrack integration domain
+                        // once Genesys creates the dedicated integration type.
                         'domain': 'integration',
                         'entityName': 'examplePremiumApp',
                         'actionSet': ['*'],
                         'allowConditions': false
                     }
                 ]
-            }
-        ],
-        'group': [
-            {
-                'name': 'Supervisors',
-                'description': 'Supervisors have the ability to watch a queue for ACD conversations.',
-            }
-        ],
-        'app-instance': [
-            {
-                'name': 'Partner Enablement Tools',
-                'url': 'https://genesysappfoundry.github.io/partner-enablement-tools/index.html?langTag={{gcLangTag}}&hostOrigin={{gcHostOrigin}}&targetEnv={{gcTargetEnv}}',
-                'type': 'standalone',
-                'groups': ['Supervisors']
-            }
-        ],
-        'oauth-client': [
-            {
-                'name': 'OAuth Client',
-                'description': 'Generated Client that\'s passed to the App Backend',
-                'roles': ['Role'],
-                'authorizedGrantType': 'CLIENT-CREDENTIALS',
-                /** NOTE: 
-                 * If you want to learn how you can send the created credentials back to your system,
-                 * Please read about the Post Custom Setup module here:
-                 * https://developer.genesys.cloud/appfoundry/premium-app-wizard/7-custom-setup#post-custom-setup-module
-                 */
             }
         ]
     },
