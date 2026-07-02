@@ -1,17 +1,15 @@
 export default {
   // OAuth Client (PKCE Code Grant) created in the Maintel Genesys Cloud org.
   // Its authorized redirect URIs must include the wizardUriBase below.
-  // TODO: replace with the real client ID before the wizard can run.
   clientID: "c6a9306a-118b-4c6c-a481-0db79622b05d",
 
   // wizardUriBase: 'http://localhost:8080/wizard/',
-  wizardUriBase: "https://maintel-icon.github.io/map-audittrack-gafpa/wizard/",
+  wizardUriBase: "https://audittrack.mainteldocs.co.uk/wizard/",
 
   // The actual URL of the landing page of your web app or your web site (when wizard has been run).
   // previously - defined as premiumAppURL
   // redirectURLOnWizardCompleted: 'http://localhost:8080/index.html',
-  redirectURLOnWizardCompleted:
-    "https://maintel-icon.github.io/map-audittrack-gafpa/index.html",
+  redirectURLOnWizardCompleted: "https://audittrack.mainteldocs.co.uk/index.html",
   redirectURLWithParams: true,
 
   // Genesys Cloud assigned name for the premium app

@@ -23,20 +23,20 @@ The site is hosted using **GitHub Pages** and serves as the publicly accessible 
 ## 🔧 How the Genesys Integration Works
 
 1. The AuditTrack Premium App integration is installed from Genesys Cloud **Admin → Integrations** (during development, via the shared `premium-app-example` integration type; after AppFoundry approval, via the dedicated Maintel AuditTrack integration type created by Genesys).
-2. The integration's **Application URL** points at the installation wizard: `https://maintel-icon.github.io/map-audittrack-gafpa/wizard/index.html`
+2. The integration's **Application URL** points at the installation wizard: `https://audittrack.mainteldocs.co.uk/wizard/index.html`
 3. The wizard authenticates the admin (OAuth PKCE), verifies the product is enabled in the org, provisions the AuditTrack access role, and then redirects to the landing page (`index.html`), which acts as the holding page inside Genesys Cloud.
 
 ### Remaining Configuration
 
-- `docs/wizard/config/config.js` → `clientID` must be set to a **Token Implicit / PKCE Code grant OAuth Client** created in the Maintel Genesys Cloud org, with the wizard URL as an authorized redirect URI.
+- The site is served on the custom domain `audittrack.mainteldocs.co.uk` (DNS CNAME to `maintel-icon.github.io`, plus `docs/CNAME` in this repo). The wizard's OAuth Client in the Maintel Genesys Cloud org must have the custom-domain wizard URL as an authorized redirect URI.
 - After AppFoundry approval, update `premiumAppIntegrationTypeId`, `premiumAppViewPermission`, and the role `entityName` in `config.js` to the Genesys-assigned integration type.
 - `enableUninstall` in `config.js` should be set to `false` before production listing.
 
 ## 🚀 Access the Live Pages
 
-- **Main Page:** [View AuditTrack App Page](https://maintel-icon.github.io/map-audittrack-gafpa/)
-- **Help Guide:** [Help Guide](https://maintel-icon.github.io/map-audittrack-gafpa/help.html)
-- **FAQ:** [FAQ](https://maintel-icon.github.io/map-audittrack-gafpa/faq.html)
+- **Main Page:** [View AuditTrack App Page](https://audittrack.mainteldocs.co.uk/)
+- **Help Guide:** [Help Guide](https://audittrack.mainteldocs.co.uk/help.html)
+- **FAQ:** [FAQ](https://audittrack.mainteldocs.co.uk/faq.html)
 
 ## 🛡️ About AuditTrack
 
