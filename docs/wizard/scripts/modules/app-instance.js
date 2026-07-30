@@ -128,7 +128,7 @@ async function configure(logFunc, installedData, userId) {
 
         // Manage Wizard during development, before approval, using premiumAppIntegrationTypeId='premium-app-example' (sandbox and permissions in request schema)
         // and in production, after approval, using premiumAppIntegrationTypeId='premium-app-vendorABC' (sandbox and permissions not allowed in request schema)
-        if (config.premiumAppIntegrationTypeId === 'premium-app-example') {
+        if (config.premiumAppIntegrationTypeId === 'premium-app-maintel-audittrack') {
             integrationConfig.body.properties.sandbox = appInstanceInstall.sandbox || 'allow-forms,allow-modals,allow-popups,allow-presentation,allow-same-origin,allow-scripts,allow-downloads';
             integrationConfig.body.properties.permissions = appInstanceInstall.permissions || 'camera,microphone,geolocation,clipboard-write,display-capture,fullscreen';
         }

@@ -9,7 +9,8 @@ export default {
   // The actual URL of the landing page of your web app or your web site (when wizard has been run).
   // previously - defined as premiumAppURL
   // redirectURLOnWizardCompleted: 'http://localhost:8080/index.html',
-  redirectURLOnWizardCompleted: "https://audittrack.mainteldocs.co.uk/index.html",
+  redirectURLOnWizardCompleted:
+    "https://audittrack.mainteldocs.co.uk/index.html",
   redirectURLWithParams: true,
 
   // Genesys Cloud assigned name for the premium app
@@ -18,17 +19,17 @@ export default {
   //            Once your premium app is approved an integration type will be created
   //            by the Genesys Cloud product team and you can update the name at that time.
   // previously - defined as appName
-  premiumAppIntegrationTypeId: "premium-app-example",
+  premiumAppIntegrationTypeId: "premium-app-maintel-audittrack",
 
   // Optional - Some Premium Applications leverage both a premium app and a premium widget
-  premiumWidgetIntegrationTypeId: "premium-widget-example",
+  premiumWidgetIntegrationTypeId: "premium-widget-maintel-audittrack",
 
   // The minimum permission required for a user to access the Premium App.
   // NOTE: During initial development please use the default permission
   //      'integration:examplePremiumApp:view'. Once your premium app is approved,
   //      the unique integration domain will be generated and this must be updated.
   // previously - defined as viewPermission
-  premiumAppViewPermission: "integration:examplePremiumApp:view",
+  premiumAppViewPermission: "integration:maintelAuditTrack:view",
   // Permissions required for running the Wizard App
   // all, premium, wizard, none (default)
   checkInstallPermissions: "none",
@@ -87,7 +88,7 @@ export default {
             // NOTE: update entityName to the AuditTrack integration domain
             // once Genesys creates the dedicated integration type.
             domain: "integration",
-            entityName: "examplePremiumApp",
+            entityName: "maintelAudittrackPremiumApp",
             actionSet: ["*"],
             allowConditions: false,
           },
